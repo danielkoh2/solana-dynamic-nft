@@ -51,7 +51,7 @@ impl<'info> FreezeNft<'info> {
 
         let signer_seeds: &[&[&[u8]]] = &[&[
             b"collection_authority",
-            &self.authority.key().to_bytes(),
+            &self.collection.key().to_bytes(),
             &[self.collection_authority.bump],
         ]];
 

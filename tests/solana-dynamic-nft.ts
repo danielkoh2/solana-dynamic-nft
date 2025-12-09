@@ -1,7 +1,7 @@
 import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
 import { SolanaDynamicNft } from "../target/types/solana_dynamic_nft";
-import {BPF_LOADER_DEPRECATED_PROGRAM_ID, Keypair, PublicKey, SystemProgram} from "@solana/web3.js";
+import { Keypair, PublicKey, SystemProgram} from "@solana/web3.js";
 import { assert } from "chai";
 import {MPL_CORE_PROGRAM_ID} from "@metaplex-foundation/mpl-core";
 
@@ -65,11 +65,11 @@ describe("solana-dynamic-nft", () => {
     console.log(`invalidCollectionAuthorityPda ${invalidCollectionAuthorityPda.toString()}`);
 
     // Derive ProgramData PDA using the BPF Loader Upgradable program
+    const BPF_LOADER_UPGRADEABLE_PROGRAM_ID = new PublicKey("BPFLoaderUpgradeab1e11111111111111111111111");
     programDataAccount = PublicKey.findProgramAddressSync(
         [program.programId.toBuffer()],
-        BPF_LOADER_DEPRECATED_PROGRAM_ID,
+        BPF_LOADER_UPGRADEABLE_PROGRAM_ID,
     )[0];
-    console.log(`programDataAccount ${programDataAccount.toString()}`);
     // Verify ProgramData exists after deployment
     const programData = await connection.getAccountInfo(programDataAccount);
     assert.ok(programData, "ProgramData should exist after deployment");
