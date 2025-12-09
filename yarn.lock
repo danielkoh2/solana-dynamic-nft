@@ -77,6 +77,90 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@metaplex-foundation/mpl-core@npm:^1.7.0":
+  version: 1.7.0
+  resolution: "@metaplex-foundation/mpl-core@npm:1.7.0"
+  dependencies:
+    "@msgpack/msgpack": ^3.0.0-beta2
+  peerDependencies:
+    "@metaplex-foundation/umi": ">=0.8.2 <2.0.0"
+    "@noble/hashes": ^1.3.1
+  checksum: f88d364d92a1c7a729e56ed179a5e0ccebe8f3f27d4039ea161aa49d7f1962f7751296eeec25c4590724ed03c72c68d66b7899e447c69107f7ce76ab0125ca3d
+  languageName: node
+  linkType: hard
+
+"@metaplex-foundation/umi-options@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@metaplex-foundation/umi-options@npm:1.4.1"
+  checksum: e043a99bf7c9618dc700fb480dfaf6382a98e830e7254e1804a3b6ef71f7ac95d870057809991c5e99cb953a521763aacafb71f1e37c2599ba3d41de28115f1e
+  languageName: node
+  linkType: hard
+
+"@metaplex-foundation/umi-public-keys@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@metaplex-foundation/umi-public-keys@npm:1.4.1"
+  dependencies:
+    "@metaplex-foundation/umi-serializers-encodings": ^1.4.1
+  checksum: a770931eef05db104adb05658228392353bafb3baddc8ad57a8e58b765eaa48f3d58d27ab5e135cf78925f0379f9b5e4f1ecbf83f55f799e5c6af3caf41cde83
+  languageName: node
+  linkType: hard
+
+"@metaplex-foundation/umi-serializers-core@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@metaplex-foundation/umi-serializers-core@npm:1.4.1"
+  checksum: 67b6aec6d5d048b33a39fb78acdae83f6d8970255bff2317d5fddbe972dd89251db8f608a2a655105870fccc77a9ccd6dddc06e15cc8343e8b0767416ffb24f9
+  languageName: node
+  linkType: hard
+
+"@metaplex-foundation/umi-serializers-encodings@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@metaplex-foundation/umi-serializers-encodings@npm:1.4.1"
+  dependencies:
+    "@metaplex-foundation/umi-serializers-core": ^1.4.1
+  checksum: e09becf1c4645a0b4555fb333acf7b5ccc6b1e99625bec45420508bb082acfaf2ae057f9cd24af9c9f0fd2dcd59e9b71e4013a1a6e5aa2b511ef04a2a1ea1bf2
+  languageName: node
+  linkType: hard
+
+"@metaplex-foundation/umi-serializers-numbers@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@metaplex-foundation/umi-serializers-numbers@npm:1.4.1"
+  dependencies:
+    "@metaplex-foundation/umi-serializers-core": ^1.4.1
+  checksum: de051d4b7debf57afba66c3bb9e06b82f031592f08e6ec70227634fe3cda0acc7c8bef3bcd3e69d44cd47921a1904c7ec57091c0158c80ca5af03a8d41a19568
+  languageName: node
+  linkType: hard
+
+"@metaplex-foundation/umi-serializers@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@metaplex-foundation/umi-serializers@npm:1.4.1"
+  dependencies:
+    "@metaplex-foundation/umi-options": ^1.4.1
+    "@metaplex-foundation/umi-public-keys": ^1.4.1
+    "@metaplex-foundation/umi-serializers-core": ^1.4.1
+    "@metaplex-foundation/umi-serializers-encodings": ^1.4.1
+    "@metaplex-foundation/umi-serializers-numbers": ^1.4.1
+  checksum: 37e9ef7d703874d0518aebdb40ce291db80b0dfca23eed7cd032c97a423de609ccdc4816be5e9a215786eff028820db74b93711628885825d006c1dc771ed70e
+  languageName: node
+  linkType: hard
+
+"@metaplex-foundation/umi@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@metaplex-foundation/umi@npm:1.4.1"
+  dependencies:
+    "@metaplex-foundation/umi-options": ^1.4.1
+    "@metaplex-foundation/umi-public-keys": ^1.4.1
+    "@metaplex-foundation/umi-serializers": ^1.4.1
+  checksum: 0d839423f3d9c91cc9078e8ae937d84aaa80c5e12113013c6423902f3773ecdc019bef7e3fff217fc2e6dcc5d9496432456da327a5f0fee3b4b4c30d55e928c7
+  languageName: node
+  linkType: hard
+
+"@msgpack/msgpack@npm:^3.0.0-beta2":
+  version: 3.1.2
+  resolution: "@msgpack/msgpack@npm:3.1.2"
+  checksum: dd258a7bb684ed2becfb90002233b56b922d95086b98c99a1ce9416b1ac9fe67275dcdaa36cb1a1c8f3f289daff1b31262d060ed7e7035b98cb036e54254ed60
+  languageName: node
+  linkType: hard
+
 "@noble/curves@npm:^1.4.2":
   version: 1.9.7
   resolution: "@noble/curves@npm:1.9.7"
@@ -161,7 +245,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@solana/web3.js@npm:^1.69.0":
+"@solana/web3.js@npm:^1.69.0, @solana/web3.js@npm:^1.98.4":
   version: 1.98.4
   resolution: "@solana/web3.js@npm:1.98.4"
   dependencies:
@@ -1602,6 +1686,9 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@coral-xyz/anchor": ^0.32.1
+    "@metaplex-foundation/mpl-core": ^1.7.0
+    "@metaplex-foundation/umi": ^1.4.1
+    "@solana/web3.js": ^1.98.4
     "@types/bn.js": ^5.1.0
     "@types/chai": ^4.3.0
     "@types/mocha": ^9.0.0
