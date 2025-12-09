@@ -4,6 +4,7 @@ use mpl_core::{
     types::{Attribute, Attributes, FreezeDelegate, Plugin, PluginAuthority, PluginAuthorityPair},
     ID as CORE_PROGRAM_ID,
 };
+use mpl_core::types::BurnDelegate;
 use crate::{state::CollectionAuthority, error::MetaplexCoreError};
 
 #[derive(Accounts)]
@@ -81,6 +82,12 @@ impl<'info> MintNft<'info> {
                 },
                 PluginAuthorityPair {
                     plugin: Plugin::FreezeDelegate(FreezeDelegate {frozen: true}),
+                    authority: Some(PluginAuthority::Address {
+                        address: self.collection_authority.key(),
+                    }),
+                },
+                PluginAuthorityPair {
+                    plugin: Plugin::BurnDelegate(BurnDelegate {}),
                     authority: Some(PluginAuthority::Address {
                         address: self.collection_authority.key(),
                     }),

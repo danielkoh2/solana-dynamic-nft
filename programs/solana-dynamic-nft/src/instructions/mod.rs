@@ -1,9 +1,9 @@
-mod whitelist_creator;
-mod create_collection;
-mod mint_nft;
-mod freeze_nft;
-mod thaw_nft;
-mod update_nft;
+pub mod whitelist_creator;
+pub mod create_collection;
+pub mod mint_nft;
+pub mod freeze_nft;
+pub mod thaw_nft;
+pub mod update_nft;
 
 pub use whitelist_creator::*;
 pub use create_collection::*;
